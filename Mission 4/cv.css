@@ -7,7 +7,7 @@ body {
 
 .block1{
 
-
+    opacity: 0.90;
 font-weight: bold;
 margin: auto;
 width: 780px;
@@ -22,18 +22,22 @@ height: 950px;
 
 .block2{
 
-    
+    padding: 5px;
     float: left;
     font-weight: bold;
     margin-top: 30px;
     margin-left: 60px;
     width: 300px;
     font-size: 16px;
-    border: 5px solid black ;
-    border-radius: 10px / 30px;
+    border: 5px solid black  ;
+    border-radius: 30px;
    margin-right: 70px;
     height: 200px;
     text-align: justify;
+    border-style: inset;
+    opacity: 0.70;
+    
+    
     
     }
 
