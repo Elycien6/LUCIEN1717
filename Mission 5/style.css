@@ -35,6 +35,12 @@ nav > ul > li > a {
     
 }
 
+nav ul li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+}
 
 nav > ul > li > a:hover {
     background-color: #333;
