@@ -1,139 +1,133 @@
-body, ul {
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color:whitesmoke;
+    color: whitesmoke;
 }
+
 
 nav {
-    background-color: black;
-    padding: 10px;
-    width: 100%;
+    background-color: #333;
+    text-align: center;
+    position: relative;
 }
 
-nav > ul {
-    list-style-type: none;
+nav label {
+    display: none;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
+
+nav input {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
-    margin: 0;
-    padding: 0;
-}
-
-nav > ul > li {
-    position: relative;
-    float: left;
-}
-
-nav > ul > li > a {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    
-    
-}
-
-
-nav > ul > li > a:hover {
     background-color: #333;
-    border-top: 3px solid #ff6347;
-    padding-left: 25px; 
-    transform: scale(1.05); 
 }
 
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li:hover {
+    background-color: #444;
+}
 
 nav ul ul {
-    max-height: 0;
-    overflow: hidden; 
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 999;
-    background-color: #333;
+    background-color: #444;
+    list-style: none;
     padding: 0;
-    border: 1px solid #ccc;
-    width: 200px;
-    
+    z-index: 1000;
+    min-width: 200px;
 }
 
 nav ul ul li {
-    list-style: none;
+    border-bottom: 1px solid #555;
 }
 
 nav ul ul li a {
     display: block;
     padding: 10px;
+    color: lightgray;
     text-decoration: none;
-    color: white;
-    background-color: #666;
-    border-bottom: 1px solid #555;
-    
 }
 
-nav ul ul li a:hover {
-    background-color: #999;
-    color: white;
-    font-weight: bold;
-    padding-left: 15px;
+nav ul ul li:hover {
+    background-color: #555;
 }
 
 
-nav > ul > li:hover > ul {
-    max-height: 300px; 
+nav ul li:hover ul {
+    display: block;
 }
 
-nav::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav input[type=checkbox]:checked ul{
-
-    display:block;
-}
-@media screen and (max-width: 680px) {
-    nav ul {
-        display: block;
-        flex-direction: column;
-        text-align:center;
-    }
-
+@media (max-width: 680px) {
     nav label {
         display: block;
-        background-color: #464a5c;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        cursor: pointer;
     }
 
-    input[type="checkbox"]:checked ~ nav ul {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav input:checked + label + ul {
         display: flex;
     }
 
-    nav ul > li {
+    nav ul li {
         width: 100%;
+        text-align: left;
     }
 
-    nav ul > li > a {
+    nav ul li a {
         display: block;
-        text-align: left;
-        padding: 10px;
+        padding: 15px;
+        border-bottom: 1px solid #444;
     }
 
     nav ul ul {
-        position: relative;
+        position: static;
+        display: none;
         width: 100%;
     }
 
-    nav ul ul li a {
-        padding-left: 20px;
+    nav ul li:hover ul {
+        display: block;
     }
-}
 
-input[type="checkbox"] {
-    display: none;
+    nav ul ul li a {
+        width: 100%;
+        padding: 10px 20px;
+    }
 }
