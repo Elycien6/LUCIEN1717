@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="calcul()">
+    <div class="container">
+        <h1>Facture</h1>
+
+
+        <div class="row header">
+            <div class="label">Article</div>
+            <div class="label">Prix Unitaire</div>
+            <div class="label">Quantité</div>
+            <div class="label">Résultat</div>
+        </div>
+
+        <div class="row">
+            <div class="label">Article 1</div>
+            <input type="number" id="a1" value="0">
+            <input type="number" id="b1" value="0">
+            <input type="number" id="c1" disabled>
+        </div>
+
+
+        <div class="row">
+            <div class="label">Article 2</div>
+            <input type="number" id="a2" value="0">
+            <input type="number" id="b2" value="0">
+            <input type="number" id="c2" disabled>
+        </div>
+
+        <div class="row">
+            <div class="label">Article 3</div>
+            <input type="number" id="a3" value="0">
+            <input type="number" id="b3" value="0">
+            <input type="number" id="c3" disabled>
+        </div>
+
+
+        <div class="row">
+            <div class="label">Total TTC</div>
+            <input type="number" id="total" disabled>
+        </div>
+
+
+        <div class="buttons">
+            <button onclick="calcul(true)">Réinitialiser</button>
+            <button onclick="calcul()">Calculer</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
