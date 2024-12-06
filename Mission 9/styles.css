@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+
+font-family: Arial, sans-serif;
+color: #002c6e;
+
+}
+
+/* aligner le texte de la fenetre de correct vers la gauche  */
+#correction-list{
+
+
+      text-align: left;
+}
+
+/* titre des questions */
+p {
+    text-decoration: underline ;
+}
+
+form {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* taille du texte en dessous de chaque questions */
+label {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/*  Bouton resultat*/
+#correction {
+    background-color: #193af7;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+margin: 10px 5px;
+}
+
+/* hover du bouton resultat */
+#correction:hover{
+
+background-color: #0f26aa;
+
+
+}
+
+#correction-container {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+
+    margin-top: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+#correction-list {
+    font-size: 16px;
+    color: #333;
+}
+
+/*  bouton correc*/
+
+#affich-correc {
+    background-color: #0d8f13;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+/* hover du correc */
+#affich-correc:hover {
+
+background-color: #09610d;
+
+
+}
+
+/* bouton effacer */
+#effacer {
+background-color: rgb(255, 0, 0);
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+margin: 10px 5px;
+
+
+}
+/*  hover du bouton effacer*/
+#effacer:hover{
+
+    background-color: rgb(155, 0, 0);
+    
+
+}
+
+
