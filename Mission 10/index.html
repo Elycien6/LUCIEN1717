@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <script src="facture.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>nom de Compagnie </h1>
+    <p>Article : <input type="text" id="t1" placeholder="Nom de l'article"></p>
+    <p>Quantité : <input type="number" id="t2" min="1" value="1"></p>
+    <p>Prix Unité (€) : <input type="number" id="t3" step="0.01" value="0.00"></p>
+    <p>Total Ligne (€) : <input type="text" id="t4" value="0.00" readonly></p>
+    <button onclick="ajouter()">Ajouter Ligne</button>
+
+    <table id="myTable" border="1" style="width:100%; margin-top:20px; border-collapse:collapse;">
+        <thead>
+            <tr>
+                <th>Article</th>
+                <th>Quantité</th>
+                <th>Prix Unité (€)</th>
+                <th>Total (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div style="margin-top:20px;">
+        <p>Sous-total : <span id="soustotal">0.00</span> €</p>
+        <p>Remise : <span id="remise">15</span> €</p>
+        <p>Taxe (20%) : <span id="taxe">0.00</span> €</p>
+        <p>Livraison : <span id="Livraison">10.00</span> €</p>
+        <h2>Total : <span id="total">0.00</span> €</h2>
+    </div>
+
+    <button onclick="calculer()">Calculer</button>
+    <button onclick="Reintialiser()">Réinitialiser</button>
+</body>
+</html>
